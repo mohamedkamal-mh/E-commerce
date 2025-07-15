@@ -30,7 +30,8 @@ import AllOrders from './components/AllOrders/AllOrders';
 let route = createBrowserRouter([
   {
     path: '', element: <Layout />, children: [
-      { index: true, element: <ProtectRoute><Home /></ProtectRoute> },
+      { index: true, element: <Login/> },
+
       { path: 'brands', element: <ProtectRoute><Brands /></ProtectRoute> },
       { path: 'categories', element: <ProtectRoute><Categories /></ProtectRoute> },
       { path: 'cart', element: <ProtectRoute><Cart /></ProtectRoute> },
