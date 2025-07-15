@@ -30,8 +30,7 @@ import AllOrders from './components/AllOrders/AllOrders';
 let route = createBrowserRouter([
   {
     path: '', element: <Layout />, children: [
-      { index: true, element: <Login/> },
-
+      { index: true, element: <ProtectRoute><Home /></ProtectRoute> },
       { path: 'brands', element: <ProtectRoute><Brands /></ProtectRoute> },
       { path: 'categories', element: <ProtectRoute><Categories /></ProtectRoute> },
       { path: 'cart', element: <ProtectRoute><Cart /></ProtectRoute> },
@@ -45,7 +44,7 @@ let route = createBrowserRouter([
       { path: 'forgetpassword', element: <ForgetPassword /> },
       { path: 'codeconfirm', element: <CodeConfirm /> },
       { path: 'updatepassword', element: <UpdatePassword /> },
-      { path: '*', element: <NotFound /> },
+      { path: '*', element: <Login/> },
     ]
   }
 ])
